@@ -1,0 +1,208 @@
+/* .container-reconocimientos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+} */
+
+.intro-reconocimientos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-reconocimientos .banner-reconocimientos {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Limita la altura máxima a 500px */
+  object-fit: cover; /* Mantiene el estilo de ajuste */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  filter: brightness(60%); /* Hacer la imagen más oscura */
+  display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+}
+
+/* SEPARACION */
+
+.container-reconocimientos .imagen-separacion-recono-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.container-reconocimientos .imagen-separacion {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  filter: brightness(40%); /* Hacer la imagen más oscura */
+}
+
+.container-reconocimientos .titulo-separacion-recono {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+  display: inline-block;
+  width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+  padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+  padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+  white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+/* PREMIOS */
+.premio-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Asegura que los bloques estén bien separados */
+  gap: 50px; /* Aumenta la separación entre la fecha y la descripción */
+  width: 100%;
+  margin-top: 50px; /* Espaciado superior */
+  margin-bottom: 50px; /* Espaciado inferior */
+  margin: 0 auto;
+}
+
+.premio-reconocimiento {
+  background: #32398e;
+  padding: 10px 15px;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.6);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+}
+
+.fecha-reconocimiento {
+  font-size: 2.5em;
+  font-weight: bold;
+  color: #f07d06;
+  text-align: center;
+}
+
+.titulo-reconocimiento {
+  font-size: 1em;
+  color: white;
+  text-align: center;
+  font-weight: bold;
+}
+
+.descripcion-reconocimiento {
+  width: 60%;
+  text-align: justify;
+  
+}
+
+/* PARA LOS COLORES INTERMEDIOS (NARANJA) */
+
+/* Fondo naranja para el premio 2008 */
+.premio-naranja {
+  background: #f07d06; /* Naranja */
+}
+
+/* Número azul para el premio 2008 */
+.fecha-azul {
+  color: #32398e; /* Azul */
+}
+
+.titulo-azul{
+  color: #32398e; /* Azul */
+}
+
+
+/* *************** */
+
+.intro-reconocimientos .texto-reconocimientos {
+  width: 60%;
+  text-align: justify;
+  font-size: 1em;
+  margin-bottom: 50px;
+  margin-top: 30px;
+}
+
+.intro-reconocimientos p {
+  margin-bottom: 35px;
+}
+
+  /* Media Query para pantallas de 1270px o menos */
+@media (max-width: 1270px) {
+  .intro-reconocimientos .texto-reconocimientos {
+      width: 80%;
+      font-size: 0.95em;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .container-reconocimientos .titulo-separacion-recono{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 840px){
+  .container-reconocimientos .titulo-separacion-recono{
+    font-size: 1.8rem;
+  }
+}
+
+/* Media Query para pantallas de 780px o menos */
+@media (max-width: 780px) {
+  .intro-reconocimientos .texto-reconocimientos {
+      width: 75%;
+      font-size: 0.9em;
+  }
+
+  .container-reconocimientos .titulo-separacion-recono{
+    font-size: 1.5rem;
+  }
+
+}
+
+@media (max-width: 750px) {
+  .fechas-reconocimientos .premio-item {
+    display: block;
+    width: 100%; 
+    margin-bottom: 50px;
+  }
+
+  .fechas-reconocimientos {
+    display: block;
+    text-align: center;
+    font-size: 0.9em; /* Reduce el tamaño de la fecha */
+    margin-bottom: 5px; /* Espacio entre fecha y título */
+  }
+
+   .titulo-reconocimiento {
+    display: block;
+    text-align: center;
+    font-size: 1em; /* Reduce un poco el tamaño del título */
+  }
+
+  .premio-reconocimiento {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 20px; /* Espaciado entre el reconocimiento y la descripción */
+  }
+}
+
+
+/* Media Query para pantallas de 501px o menos */
+@media (max-width: 501px) {
+  .intro-reconocimientos .texto-reconocimientos {
+      width: 70%;
+      font-size: 0.8em;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .container-reconocimientos .titulo-separacion-recono{
+    font-size: 1.3rem;
+  }
+}
+

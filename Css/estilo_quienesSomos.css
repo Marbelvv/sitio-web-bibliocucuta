@@ -1,0 +1,329 @@
+/* Estilos generales para el contenedor */
+.container-acerca {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.intro-acerca {
+  display: flex;
+  flex-direction: column;
+}
+
+.container-acerca .imagen-acerca {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Limita la altura máxima a 500px */
+  object-fit: cover; /* Mantiene el estilo de ajuste */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  filter: brightness(60%); /* Hacer la imagen más oscura */
+  display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+}
+
+/* SEPARACION */
+
+.container-acerca .imagen-separacion-acerca-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 40px;
+}
+
+.container-acerca .imagen-separacion {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  filter: brightness(40%); /* Hacer la imagen más oscura */
+}
+
+.container-acerca .titulo-separacion-acerca {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+  display: inline-block;
+  width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+  padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+  padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+  white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+/* *************** */
+
+.intro-acerca .texto-reseña {
+  width: 60%;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1em;
+  margin-bottom: 30px;
+}
+
+.intro-acerca .texto-reseña p {
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+/* Nueva clase para el contenedor de reseña histórica */
+.intro-acerca .imagen-reseña-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.intro-acerca .imagen-reseña {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 2vw;
+  margin-bottom: 2vw;
+  filter: brightness(40%); /* Hacer la imagen más oscura */
+}
+
+.intro-acerca .titulo-reseña {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+  display: inline-block;
+  width: fit-content;
+  padding-left: 10px;
+  padding-right: 10px;
+  white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+/* MISIÓN Y VISIÓN */
+
+.mision-vision {
+  width: 65%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  gap: 20px; /* Añadido para espacio entre las tarjetas */
+}
+
+.acercaDe {
+  flex: 0 1 45%;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra alrededor del bloque */
+}
+
+.acercaDe-icon {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 15px;
+}
+
+.acercaDe h3 {
+  font-size: 1.5em;
+  color: #32398e;
+  font-weight: bolder;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0); /* Sombra en el título */
+}
+
+.acercaDe p {
+  color: black;
+  font-weight: 600;
+}
+
+em {
+  font-style: italic;
+}
+
+/* Media Queries */
+
+/* Para pantallas menores a 1270px */
+@media screen and (max-width: 1270px) {
+  .mision-vision {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  .acercaDe {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .intro-acerca h2,
+  .texto-reseña h3 {
+    font-size: 1.8em;
+  }
+
+  .texto-reseña p {
+    font-size: 1em;
+  }
+
+  .acercaDe h3 {
+    font-size: 1.3em;
+  }
+
+  .acercaDe p {
+    font-size: 0.95em;
+  }
+
+  .intro-acerca .imagen-acerca {
+    width: 100%;
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .container-acerca .titulo-separacion-acerca{
+    font-size: 2rem;
+  }
+
+  .intro-acerca .titulo-reseña{
+    font-size: 2rem;
+  }
+
+}
+
+@media screen and (max-width: 840px){
+  .container-acerca .titulo-separacion-acerca{
+    font-size: 1.8rem;
+  }
+
+  .intro-acerca .titulo-reseña{
+    font-size: 1.8rem;
+  }
+
+}
+
+/* Para pantallas menores a 780px */
+@media screen and (max-width: 780px) {
+  .mision-vision {
+    padding: 10px;
+    width: 60%;
+  }
+
+  .acercaDe-icon {
+    width: 70px;
+    height: 70px;
+  }
+
+  .intro-acerca h2,
+  .texto-reseña h3 {
+    font-size: 1.3em;
+  }
+
+  .texto-reseña p {
+    font-size: 0.8em;
+  }
+
+  .acercaDe h3 {
+    font-size: 1.2em;
+  }
+
+  .acercaDe p {
+    font-size: 0.9em;
+  }
+
+  .texto-reseña {
+    width: 80%;
+    font-size: 0.9em;
+  }
+
+  .intro-acerca .imagen-acerca {
+    width: 100%;
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+  }
+
+  .container-acerca .titulo-separacion-acerca{
+    font-size: 1.5rem;
+  }
+
+  .intro-acerca .titulo-reseña{
+    font-size: 1.5rem;
+  }
+
+}
+
+@media screen and (max-width: 650px){
+  .container-acerca .titulo-separacion-acerca{
+    font-size: 1.2rem;
+  }
+
+  .intro-acerca .titulo-reseña{
+    font-size: 1.2rem;
+  }
+
+}
+
+/* Para pantallas menores a 501px */
+@media screen and (max-width: 501px) {
+  .mision-vision {
+    padding: 5px;
+    width: 70%;
+  }
+
+  .acercaDe-icon {
+    width: 60px;
+    height: 60px;
+  }
+
+  .intro-acerca h2 {
+    width: 80%;
+  }
+
+  .acercaDe h3 {
+    font-size: 1.1em;
+  }
+
+  .acercaDe p {
+    font-size: 0.7em;
+  }
+
+  .texto-reseña {
+    width: 90%;
+    font-size: 0.8em;
+  }
+
+  .intro-acerca .imagen-acerca {
+    width: 100%;
+    height: auto; /* Cambiado a auto para mantener la proporción */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+  }
+
+  .container-acerca .titulo-separacion-acerca{
+    font-size: 1rem;
+  }
+
+  .intro-acerca .titulo-reseña{
+    font-size: 1rem;
+  }
+
+}
+
+@media screen and (max-width: 420px){
+  .container-acerca .titulo-separacion-acerca{
+    font-size: 0.7rem;
+  }
+
+  .intro-acerca .titulo-reseña{
+    font-size: 0.7rem;
+  }
+
+}

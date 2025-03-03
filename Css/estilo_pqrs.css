@@ -1,0 +1,298 @@
+/* Estilo para la sección de PQRS */
+
+.container-pqrs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container-pqrs .banner-pqrs {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Limita la altura máxima a 500px */
+  object-fit: cover; /* Mantiene el estilo de ajuste */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  filter: brightness(60%); /* Hacer la imagen más oscura */
+  display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+}
+
+/* SEPARACION */
+
+.container-pqrs .imagen-separacion-pqrs-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.container-pqrs .imagen-separacion {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  filter: brightness(40%); /* Hacer la imagen más oscura */
+}
+
+.container-pqrs .titulo-separacion-pqrs {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+  display: inline-block;
+  width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+  padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+  padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+  white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+.content {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 20px;
+  padding-top: 50px;
+  margin-bottom: 60px;
+}
+
+.intro-pqrs {
+  width: 50%;
+}
+
+.texto-pqrs {
+  text-align: justify;
+}
+
+.texto-pqrs h3 {
+  color: #32398e;
+  font-weight: bold;
+  margin-top: 3vw;
+}
+
+.contact-form-section {
+  width: 35%; /* Reduce el ancho de la sección */
+  height: max-content;
+  padding: 15px; /* Reduce el padding interno */
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.4); /* Reduce la sombra */
+  margin-bottom: 60px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-form label {
+  margin-top: 8px; /* Reduce el margen superior */
+  font-weight: bold;
+  font-size: 0.9em; /* Reduce el tamaño de la fuente */
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea {
+  margin-top: 4px; /* Reduce el margen superior */
+  padding: 8px; /* Reduce el padding interno */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 0.9em; /* Reduce el tamaño de la fuente */
+}
+
+.contact-form .form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px; /* Reduce el margen superior */
+}
+
+.contact-form button {
+  padding: 8px 15px; /* Reduce el padding de los botones */
+  border: none;
+  border-radius: 15px; /* Reduce el borde redondeado */
+  cursor: pointer;
+  font-size: 0.9em; /* Reduce el tamaño de la fuente */
+}
+
+.contact-form button[type="submit"] {
+  background-color: #32398e;
+  color: white;
+}
+
+.contact-form button[type="submit"]:hover {
+  background-color: #f07d06;
+}
+
+.contact-form button[type="reset"] {
+  background-color: #32398e;
+  color: white;
+}
+
+.contact-form button[type="reset"]:hover {
+  background-color: #f07d06;
+}
+
+.campo-obligatorio {
+  font-size: 0.8em;
+  color: #32398e;
+  margin-top: 5px; /* Espaciado entre el textarea y el texto */
+}
+
+/* Media Queries */
+
+/* Para pantallas menores a 1270px */
+@media screen and (max-width: 1270px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-pqrs {
+    width: 80%;
+  }
+
+  .contact-form-section {
+    width: 50%;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .container-pqrs h2,
+  .texto-pqrs h3 {
+    font-size: 1.8em;
+  }
+
+  .container-pqrs h2{
+    width: 80%;
+  }
+
+  .container-pqrs .imagen-pqrs {
+    height: auto; /* Cambiar altura a auto */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+  }
+
+  .texto-pqrs p {
+    font-size: 1em;
+  }
+
+  .contact-form-section {
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.5);
+  }
+}
+
+@media screen and (max-width: 1150px){
+  .container-pqrs .titulo-separacion-pqrs{
+    font-size: 2.2rem;
+  }
+}
+
+@media screen and (max-width: 1000px){
+  .container-pqrs .titulo-separacion-pqrs{
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 840px){
+  .container-pqrs .titulo-separacion-pqrs{
+    font-size: 1.4rem;
+  }
+}
+
+/* Para pantallas menores a 780px */
+@media screen and (max-width: 780px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-pqrs, .contact-form-section {
+    width: 90%;
+  }
+
+  .contact-form-section {
+    width: 60%;
+  }
+
+  .container-pqrs h2,
+  .texto-pqrs h3 {
+    font-size: 1.3em;
+  }
+
+  .container-pqrs h2{
+    width: 80%;
+  }
+
+  .container-pqrs .imagen-pqrs {
+    height: auto; /* Cambiar altura a auto */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+  }
+
+  .texto-pqrs p {
+    font-size: 0.8em;
+  }
+
+  .contact-form-section {
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.4);
+  }
+}
+
+@media screen and (max-width: 650px){
+  .container-pqrs .titulo-separacion-pqrs{
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (max-width: 550px){
+  .container-pqrs .titulo-separacion-pqrs{
+    font-size: 1rem;
+  }
+}
+
+/* Para pantallas menores a 501px */
+@media screen and (max-width: 501px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .intro-pqrs, .contact-form-section {
+    width: 95%;
+  }
+
+  .container-pqrs h2 {
+    width: 80%;
+  }
+
+  .container-pqrs h2,
+  .texto-pqrs h3 {
+    font-size: 1.1em;
+  }
+
+  .container-pqrs .imagen-pqrs {
+    height: auto; /* Cambiar altura a auto */
+    object-fit: contain; /* Asegura que la imagen completa sea visible */
+  }
+
+  .texto-pqrs p {
+    font-size: 0.7em;
+  }
+
+  .contact-form-section {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+  }
+}
+
+@media screen and (max-width: 470px){
+  .container-pqrs .titulo-separacion-pqrs{
+    font-size: 0.7rem;
+  }
+}

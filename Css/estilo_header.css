@@ -1,0 +1,479 @@
+/* Estilos generales */
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body.lock-scroll {
+  overflow: hidden;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #32398e;
+  padding: 5vh 5vw;
+}
+
+.header img.logo_barra {
+  height: 4.5vw;
+}
+
+.nav-links {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav-links li {
+  position: relative;
+  margin-right: 1vw;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #f9f9f9;
+  padding: 1vh 2vw;
+  display: block;
+  transition: background-color 0.3s ease;
+}
+
+.nav-links a:hover {
+  background-color: #f07d06;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  text-align: center;
+  background-color: #f9f9f9;
+  box-shadow: 0px 0.8vh 1.6vh 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  min-width: 15vw;
+}
+
+.dropdown-content a {
+  padding: 1.2vh 1.6vw;
+  text-decoration: none;
+  display: block;
+  color: #000;
+  border: 0.1vh solid rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a:hover {
+  background-color: #f07d06;
+}
+
+.nav-links li:hover .dropdown-content {
+  display: block;
+}
+
+.social-icons {
+  text-align: center;
+  padding: 10px;
+}
+
+.follow-us {
+  color: white;
+  font-size: 0.7rem;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+.iconos-redes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.iconos-redes a {
+  text-decoration: none;
+}
+
+.iconos-redes img {
+  height: 3vh;
+  margin: 0;
+  padding: 0;
+  border: none;
+  vertical-align: middle;
+  transition: filter 0.3s ease;
+}
+
+.iconos-redes img:hover {
+  filter: brightness(0) saturate(100%) invert(53%) sepia(83%) saturate(1434%) hue-rotate(358deg) brightness(100%) contrast(101%);
+}
+
+/* Estilos para dispositivos móviles */
+.nav_toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.nav_toggle span {
+  width: 30px;
+  height: 4px;
+  background: white;
+  margin-bottom: 5px;
+  border-radius: 2px;
+  transition: all 0.2s linear;
+}
+
+@media (max-width: 1272px) {
+  .header {
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .header img.logo_barra {
+    height: 60%;
+    position: absolute;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 100px; /* Desplaza el menú hacia abajo para no superponerse con el logo */
+    height: calc(100% - 100px); /* Ajusta la altura para que sea adecuada */
+    width: 50%;
+    background-color: #32398e;
+    flex-direction: column;
+    text-align: left;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    padding: 1vh 2vw;
+    font-size: 0.9rem;
+    display: block;
+  }
+
+  .nav-links .principal {
+    padding: 1vh 2vw;
+    font-size: 1.3rem;
+  }
+
+  .nav-links li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5px 0;
+    width: 100%;
+  }
+
+  .follow-us {
+    color: white;
+    font-size: 0.6rem;
+    margin: 0 1vw 0 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+  }
+
+  .iconos-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .social-icons img {
+    height: 4vh;
+    margin: 0 0.3vw;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: static;
+    background-color: white;
+  }
+
+  .dropdown-content.open {
+    display: block;
+  }
+
+  .nav_toggle {
+    display: flex;
+    position: absolute;
+    right: 4vw;
+    top: 2vh;
+    z-index: 1001;
+  }
+
+  .nav_toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s;
+  }
+  
+  .nav_toggle.close span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 20px;
+  }
+  
+  .nav_toggle.close span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav_toggle.close span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -5px;
+  }
+}
+
+@media (max-width: 780px) {
+  .header {
+    padding: 0 2vw;
+    display: flex;
+    align-items: center;
+    height: 100px;
+    position: relative;
+    z-index: 1001;
+  }
+
+  .header img.logo_barra {
+    height: 50%;
+    position: absolute;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  .nav-links {
+    position: fixed;
+    right: -100%;
+    top: 100px; /* Desplaza el menú hacia abajo para no superponerse con el logo */
+    height: calc(100% - 100px); /* Ajusta la altura para que sea adecuada */
+    width: 50%;
+    background-color: #32398e;
+    flex-direction: column;
+    text-align: left;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .nav-links a {
+    padding: 1vh 2vw;
+    font-size: 0.7rem;
+    display: block;
+  }
+
+  .nav-links .principal {
+    padding: 1vh 2vw;
+    font-size: 1rem;
+  }
+
+  .nav-links li {
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: 0.5px 0;
+    width: 100%;
+  }
+
+  .follow-us {
+    color: white;
+    font-size: 0.6rem;
+    margin: 0 1vw 0 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .social-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6vh;
+    margin-bottom: 2vh;
+  }
+
+  .iconos-redes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0;
+  }
+
+  .social-icons img {
+    height: 3vh;
+    margin: 0 0.3vw;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: static;
+    background-color: white;
+  }
+
+  .dropdown-content.open {
+    display: block;
+  }
+
+  .nav_toggle {
+    display: flex;
+    position: absolute;
+    right: 4vw;
+    top: 2vh;
+    z-index: 1001;
+  }
+
+  .nav_toggle span {
+    display: block;
+    width: 30px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: all 0.3s;
+  }
+  
+  .nav_toggle.close span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 20px;
+  }
+  
+  .nav_toggle.close span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .nav_toggle.close span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -5px;
+  }
+}
+
+@media (max-width: 501px) {
+  /* Asegura que el encabezado ocupe todo el ancho */
+  .header {
+    width: 100%;
+    padding: 0;
+    display: flex;
+    justify-content: space-between; /* Asegura que el logo y la X estén separados correctamente */
+    align-items: center;
+    background-color: #32398e; /* Color de fondo del encabezado */
+  }
+
+  /* Ajuste del logo para estar correctamente alineado */
+  .header img.logo_barra {
+    height: 50%;
+    position: absolute;
+    left: 4vw;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+  }
+
+  /* Ajuste del botón de cierre (X) */
+  .nav_toggle {
+    margin-right: 10px; /* Espacio de la X respecto al borde derecho */
+    cursor: pointer; /* Asegura que el cursor cambie al pasar sobre el botón */
+  }
+
+  /* Menú de navegación */
+  .nav-links {
+    position: fixed;
+    top: 100px; /* Espacio desde la parte superior (puede ser ajustado) */
+    width: 100%; /* Ocupa todo el ancho de la pantalla */
+    height: calc(100% - 100px); /* Ajusta según la altura del header */
+    background-color: #32398e;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos del menú */
+    justify-content: center; /* Centra verticalmente los elementos del menú */
+    text-align: center; /* Centra el texto */
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+    overflow-y: auto; /* Permite desplazamiento si el contenido es largo */
+  }
+
+  /* Asegura que los enlaces del menú estén centrados */
+  .nav-links a {
+    padding: 1vh 0;
+    font-size: 1rem;
+    display: block;
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+  }
+
+  /* Elementos específicos de .nav-links */
+  .nav-links .principal {
+    font-size: 1.2rem; /* Tamaño de fuente más grande para los elementos principales */
+    color: white;
+  }
+
+  .nav-links .dropdown-content{
+    color: black; /* Asegura que el texto sea legible */
+  }
+
+  /* Ajuste de las redes sociales */
+  .social-icons {
+    margin-top: 20px;
+  }
+
+  .iconos-redes {
+    display: flex;
+    justify-content: center; /* Alinea los íconos de redes sociales al centro */
+    align-items: center;
+  }
+
+  .social-icons img {
+    height: 24px; /* Ajusta el tamaño de los íconos */
+    margin: 0 10px; /* Espacio entre los íconos */
+  }
+
+  /* Transiciones del botón de menú (hamburguesa) */
+  .nav_toggle.close span:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 20px;
+  }
+
+  .nav_toggle.close span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .nav_toggle.close span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -5px;
+  }
+}
+

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PQRS</title>
+    <link rel="stylesheet" href="../Css/estilo_pqrs.css" />
+    <link rel="stylesheet" href="../Css/estilo_header.css" />
+    <link rel="stylesheet" href="../Css/estilo_footer.css" />
+
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/d/1Bd5R8_up-TfKDvtncZk1HuC4ZwQf_sOs"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <main>
+      <div class="container-pqrs">
+        <!-- Imagen banner con el título centrado -->
+        <div class="imagen-separacion-pqrs-container">
+          <img
+            decoding="async"
+            width="1920"
+            height="500"
+            src="https://lh3.googleusercontent.com/d/1EWOLjwIZkcT7ka1byXmJdzPE_Iierdbf"
+            alt="Imagen banner"
+            class="banner-pqrs"
+            srcset="
+            /Img/Img_pestañas/g (2).jpg        1920w,
+            /Img/Img_pestañas/g (2).jpg_medium.png 1024w,
+            /Img/Img_pestañas/g (2).jpg_small.png  768w
+    "
+            sizes="(max-width: 1920px) 100vw, 1920px"
+          />
+          <div class="titulo-separacion-pqrs">PETICIONES, QUEJAS, RECLAMOS Y SUGERENCIAS</div>
+        </div>
+
+        <!-- ***************** -->
+
+        <div class="content">
+          <section class="intro-pqrs">
+            <div class="texto-pqrs">
+              <p>
+                La finalidad de este de PQRS es atender, dar trámite y resolver
+                oportunamente las Peticiones, Quejas, Reclamos y Sugerencias
+                presentados por los usuarios de la Biblioteca Publica, que estén
+                relacionados con los servicios prestados, con el propósito de
+                mejorar la calidad en cada uno de los servicios por la
+                Institución.
+              </p>
+
+              <h3>Vocabulario.</h3>
+
+              <p>
+                <strong>Petición:</strong> Cualquier tipo de solicitud verbal o
+                escrita que presenta el usuario con el fin de requerir la
+                intervención en un asunto de interés general y/o particular, o
+                acerca de una información o consulta relacionada con la gestión
+                de la Institución.
+              </p>
+
+              <p>
+                <strong>Quejas:</strong> Cualquier tipo de inconformidad sobre
+                irregularidades administrativas o de operación, una conducta
+                incorrecta o acción irregular de un funcionario de la
+                Institución.
+              </p>
+
+              <p>
+                <strong>Reclamos:</strong> Cualquier tipo de inconformidad sobre
+                la prestación de los servicios o deficiente actuación por parte
+                de una autoridad administrativa o de operación de la
+                Institución.
+              </p>
+              <p>
+                <strong>Sugerencia:</strong> Es la contribución por medio de
+                ideas o iniciativas con el fin de mejorar la calidad de los
+                procesos y servicios prestados.
+              </p>
+
+            </div>
+          </section>
+
+          <section class="contact-form-section">
+            <form class="contact-form" id="contactForm">
+              <label for="name">Nombre *</label>
+              <input type="text" id="name" name="name" required />
+
+              <label for="email">Email *</label>
+              <input type="email" id="email" name="email" required />
+
+              <label for="type">Tipo PQRS *</label>
+              <select id="type" name="type" required>
+                <option value="">-</option>
+                <option value="peticiones">Peticiones</option>
+                <option value="quejas">Quejas</option>
+                <option value="reclamos">Reclamos</option>
+                <option value="sugerencias">Sugerencias</option>
+              </select>
+
+              <label for="phone">Celular</label>
+              <input type="tel" id="phone" name="phone" />
+
+              <label for="send_to">Enviar a *</label>
+              <select id="send_to" name="send_to" required>
+                <option value="">-</option>
+                <option value="director">Director</option>
+                <option value="coordinador">Coordinador</option>
+                <option value="contador">Contador</option>
+              </select>
+
+              <label for="message">Mensaje *</label>
+              <textarea
+                id="message"
+                name="message"
+                rows="4"
+                required
+              ></textarea>
+              <p class="campo-obligatorio">* Los campos son obligatorios.</p>
+
+              <div class="form-buttons">
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpiar</button>
+              </div>
+            </form>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- PIE DE PAGINA -->
+
+    <div id="footer"></div>
+
+    <script src="../Js/llamar_head_foot.js"></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/odometer.min.js"
+      integrity="sha512-v3fZyWIk7kh9yGNQZf1SnSjIxjAKsYbg6UQ+B+QxAZqJQLrN3jMjrdNwcxV6tis6S0s1xyVDZrDz9UoRLfRpWw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </body>
+</html>

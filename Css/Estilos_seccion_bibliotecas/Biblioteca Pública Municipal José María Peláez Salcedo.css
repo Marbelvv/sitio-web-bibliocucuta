@@ -1,0 +1,192 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+/*   
+  .container-noticia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+    
+/* Diseño general */
+.intro-biblio {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container-biblio .banner-biblio {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Limita la altura máxima a 500px */
+  object-fit: cover; /* Mantiene el estilo de ajuste */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  filter: brightness(60%); /* Hacer la imagen más oscura */
+  display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+}
+
+/* ENCABEZADO */
+
+.container-biblio .imagen-separacion-biblio-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.container-biblio .imagen-separacion {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  filter: brightness(40%); /* Hacer la imagen más oscura */
+}
+
+.container-biblio .titulo-separacion-biblio {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+  display: inline-block;
+  width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+  padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+  padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+  white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+/* *************** */
+    
+
+
+    .contenido-biblio {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 80%;
+      margin: 0 auto;
+      padding: 20px 0;
+      margin-bottom: 50px;
+      margin-top: 50px;
+    }
+    
+    .imagen-biblio, .texto-biblio {
+      width: 45%; /* 45% del contenedor para cada elemento */
+    }
+    
+    .imagen-biblio {
+      margin-right: 5%; /* Espacio entre la imagen y el texto */
+    }
+    
+    .imagen-biblio img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px; /* Opcional: Añade esquinas redondeadas a la imagen */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Añade una sombra para mejor separación visual */
+    }
+    
+    .texto-biblio p {
+      margin-bottom: 20px;
+      text-align: justify;
+      line-height: 1.6em; /* Mejor legibilidad */
+      font-size: 1em;
+    }
+    
+  
+    /* Media Queries */
+    
+    /* Para pantallas menores a 1270px */
+    @media screen and (max-width: 1170px) {
+      .contenido-biblio {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      .imagen-biblio {
+        width: 50%;
+        margin-bottom: 5%; /* Espacio entre la imagen y el texto */
+      }
+    
+      .texto-biblio {
+        width: 70%;
+        margin: 0 auto;
+        text-align: center; /* Centrar el texto */
+      }
+    
+      .imagen-biblio img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px; /* Opcional: Añade esquinas redondeadas a la imagen */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Opcional: Añade una sombra para mejor separación visual */
+      }
+    
+      .texto-biblio p {
+        line-height: 1.6em; /* Mejor legibilidad */
+        font-size: 0.9em;
+      }
+    }
+  
+    @media screen and (max-width: 780px) {
+      .imagen-biblio {
+        width: 60%;
+        margin-bottom: 5%; /* Espacio entre la imagen y el texto */
+      }
+    
+      .texto-biblio {
+        width: 90%;
+      }
+    
+      .imagen-biblio img {
+        width: 100%;
+        height: auto;
+      }
+    
+      .texto-biblio p {
+        line-height: 1.6em; /* Mejor legibilidad */
+        font-size: 0.8em;
+      }
+
+      .container-biblio .titulo-separacion-biblio{
+        font-size: 1.5rem;
+      }
+    }
+    
+    @media screen and (max-width: 501px) {
+
+  
+      .imagen-biblio {
+        width: 75%;
+        margin-bottom: 5%; /* Espacio entre la imagen y el texto */
+      }
+    
+      .texto-biblio {
+        margin-top: 20px;
+        width: 90%;
+      }
+    
+      .imagen-biblio img {
+        width: 100%;
+        height: auto;
+      }
+    
+      .texto-biblio p {
+        line-height: 1.6em; /* Mejor legibilidad */
+        font-size: 0.8em;
+      }
+    }
+
+    @media screen and (max-width: 420px){
+      .container-biblio .titulo-separacion-biblio{
+        font-size: 1rem;
+      }
+    }
+    
+    

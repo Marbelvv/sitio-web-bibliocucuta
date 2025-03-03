@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biblioteca Pública Julio Pérez Ferrero</title>
+
+    <link rel="stylesheet" href="../Css/estilo_galeria_img.css" />
+    <link rel="stylesheet" href="../Css/estilo_header.css" />
+    <link rel="stylesheet" href="../Css/estilo_footer.css" />
+
+    <link
+      rel="icon"
+      href="https://lh3.googleusercontent.com/d/1Bd5R8_up-TfKDvtncZk1HuC4ZwQf_sOs"
+      type="image/x-icon"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/odometer.js/0.4.7/themes/odometer-theme-default.css"
+      integrity="sha512-kMPqFnKueEwgQFzXLEEl671aHhQqrZLS5IP3HzqdfozaST/EgU+/wkM07JCmXFAt9GO810I//8DBonsJUzGQsQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="header"></div>
+
+    <!-- BOTONES Y TITULO -->
+
+    <div class="button-container">
+      <button class="toggle-button" onclick="location.href='galeria_img.html'" id="img-btn">
+        Imágenes
+      </button>
+      <button class="toggle-button" onclick="location.href='galeria_videos.html'" id="vid-btn">
+        Videos
+      </button>
+    </div>
+    
+
+    <h3 class="gallery-title">
+      Tesoro fotográfico y audiovisual <br> de la Biblioteca Pública Julio Pérez Ferrero
+    </h3>
+
+    <!-- GALERIA IMG -->
+
+    <div class="container-galeria-img">
+      <div class="main-img-container">
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1MDWb8Zg-knqjF7-mNUTmqK5RAUD5Dw14" alt="" /><p class="img-description">Descripción de la imagen 1</p></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1uOOsM1NVdFWu1fAlsERpBhbKBALZKZ3E" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1-h28C03PMyO9w14Cn-cFc0RCAZerIVRb" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1nbGE0SiQmvo7byFbwS-fWdlvHKXQNiF6" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1zuhde-EYDzrZZKg9Da1n_ynmnA6cYFr9" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1ISNsSgZ_Zu9hrkCX0HxFTTIbWO2LBAfY" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/13zZrgaRTHx-Z8GvBhUbcCKFFi1V41SXw" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1MJ6FPqfgK4iVk0UiEVXR530XlFgS1PLP" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1XMQaEAPEC7geR55KLm6rZRWOaZv3gqyD" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/1SGKYNJMFVyXioDcyzHkP_aQCbvUxqfep" alt="" /></div>
+        <div class="img_gal"><img src="https://lh3.googleusercontent.com/d/10HlGJk37l_Aq9y4xiIiSbTe54WMKDqF2" alt="" /></div>
+      </div>
+
+      <div class="popup-image">
+        <span class="close">&times;</span>
+        <img src="https://lh3.googleusercontent.com/d/1MDWb8Zg-knqjF7-mNUTmqK5RAUD5Dw14" alt="Imagen ampliada" />
+        <span class="prev">&#10094;</span>
+        <span class="next">&#10095;</span>
+      </div>
+    </div>
+
+    <div id="footer"></div>
+
+    <script src="../Js/js_galeria_img.js"></script>
+    <script src="../Js/llamar_head_foot.js"></script>
+   
+  </body>
+
+  
+
+</html>

@@ -1,0 +1,187 @@
+/* Diseño general */
+.intro-hospital {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .container-hospital .banner-bibliotecarios {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Limita la altura máxima a 500px */
+    object-fit: cover; /* Mantiene el estilo de ajuste */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    filter: brightness(60%); /* Hacer la imagen más oscura */
+    display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+  }
+  
+  /* SEPARACION */
+  
+  .container-hospital .imagen-separacion-bibliotecarios-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .container-hospital .imagen-separacion {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5vw;
+    margin-bottom: 2vw;
+    filter: brightness(40%); /* Hacer la imagen más oscura */
+  }
+  
+  .container-hospital .titulo-separacion-bibliotecarios {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+    display: inline-block;
+    width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+    padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+    padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+    white-space: nowrap; /* Evita que el texto haga salto de línea */
+  }
+  
+
+
+/* BIBLIOTECARIOS */
+.bibliotecarios-new {
+  padding: 0;
+  margin-top: 50px;
+  margin-bottom: 70px;
+  box-sizing: border-box;
+  text-align: center; /* Centra contenido */
+}
+
+.container_bibliotecarios {
+  max-width: 70%; /* Asegura que el contenedor no sea muy grande */
+  margin: 0 auto;
+}
+
+.card {
+  box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 2px 0px;
+  margin: 0 auto 20px auto;
+  width: 100%;
+  margin-bottom: 4vw;
+}
+
+/* Ajusta todas las tarjetas al mismo tamaño */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch; /* Hace que todas las columnas tengan el mismo tamaño */
+}
+
+/* Hace que las tarjetas ocupen toda la altura de su contenedor */
+.col-md-4 {
+  display: flex;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-body h5 {
+  font-size: 1.2em;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #32398e;
+}
+
+.card-body p {
+  font-size: 0.8em;
+  margin: 10px 0;
+}
+
+.bibliotecarios-new {
+  text-align: center; /* Centrar contenido */
+}
+
+.bibliotecarios-new a,
+.row a {
+  display: inline-block;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.section-ver-mas {
+  float: right;
+  margin-top: 20px;
+  background-color: transparent;
+  color: #32398e;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bolder;
+  transition: color 0.3s ease;
+}
+
+.section-ver-mas:hover {
+  color: #f07d06;
+}
+
+ /* PARA QUE TODAS LAS IMG TENGAN EL MISMO TAMAÑO */
+ .card-img-top {
+  width: 237px; /* Establecer el ancho */
+  height: 158px; /* Establecer el alto */
+  object-fit: cover; /* Mantener la proporción de la imagen */
+}
+
+/* Media Queries */
+
+
+@media screen and (max-width: 1080px) {
+  .container-hospital .titulo-separacion-bibliotecarios {
+      font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .card-body h5 {
+    font-size: 0.9em;
+  }
+
+  .card-body p {
+    font-size: 0.7em;
+  }
+}
+
+
+@media screen and (max-width: 780px) {
+  .container-hospital .titulo-separacion-bibliotecarios {
+      font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .container-hospital .titulo-separacion-bibliotecarios {
+      font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 501px) {
+  .container-hospital .titulo-separacion-bibliotecarios {
+      font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 420px) {
+  .container-hospital .titulo-separacion-bibliotecarios {
+      font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 300px) {
+  .container-hospital .titulo-separacion-bibliotecarios {
+      font-size: 1.2rem;
+  }
+}

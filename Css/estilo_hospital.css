@@ -1,0 +1,232 @@
+/* Diseño general */
+.intro-hospital {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.container-hospital .banner-hospital {
+  width: 100%;
+  height: auto;
+  max-height: 500px; /* Limita la altura máxima a 500px */
+  object-fit: cover; /* Mantiene el estilo de ajuste */
+  max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+  filter: brightness(60%); /* Hacer la imagen más oscura */
+  display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+}
+
+/* ENCABEZADO */
+
+.container-hospital .imagen-separacion-hospital-container {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+
+.container-hospital .imagen-separacion {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+  margin-top: 0.5vw;
+  margin-bottom: 2vw;
+  filter: brightness(40%); /* Hacer la imagen más oscura */
+}
+
+.container-hospital .titulo-separacion-hospital {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+  border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+  display: inline-block;
+  width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+  padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+  padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+  white-space: nowrap; /* Evita que el texto haga salto de línea */
+}
+
+/* *************** */
+
+/* ***************************** */
+
+.section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 10vw;
+  margin: 0 auto;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.section-content.blanco {
+  background-color: white;
+  flex-direction: row-reverse;
+}
+
+.section-content.naranja {
+  background-color: #f07d06;
+  /* background-color: #bdbdbd; */
+}
+
+.texto-hospital {
+  width: 48%;
+  text-align: justify;
+  font-size: 1.1em;
+  margin: 0 20px; /* Espaciado entre texto e imagen */
+}
+
+.imagen-hospital {
+  width: 42%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Media Queries */
+@media (max-width: 1270px) {
+  .section-content {
+    padding: 30px 5vw;
+  }
+}
+
+@media screen and (max-width: 1080px){
+  .container-hospital .titulo-separacion-hospital{
+    font-size: 2rem;
+  }
+}
+
+@media screen and (max-width: 840px){
+  .container-hospital .titulo-separacion-hospital{
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 780px) {
+  .section-content {
+    flex-direction: column; /* Cambia a columna en lugar de fila */
+    padding: 20px 2vw;
+    align-items: center; /* Centrar imagen y texto */
+    width: 100%; /* Reducir el ancho al 70% */
+  }
+
+  .texto-hospital,
+  .imagen-hospital {
+    width: 70%; /* Ambas ocuparán el 100% del ancho de la sección */
+  }
+
+  .imagen-hospital {
+    margin-bottom: 20px; /* Espacio entre la imagen y el texto */
+  }
+
+  .section-content.blanco {
+    flex-direction: column-reverse; /* Ajuste para mantener la imagen en la parte superior */
+  }
+
+  .container-hospital .titulo-separacion-hospital{
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 650px){
+  .container-hospital .titulo-separacion-hospital{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 501px) {
+  .intro-hospital h2 {
+    font-size: 1.5em;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .section-content {
+    padding: 10px 1vw;
+    width: 100%; /* Reducir el ancho al 90% para pantallas más pequeñas */
+  }
+
+  .texto-hospital{
+    width: 85%; /* Ambas ocuparán el 100% del ancho de la sección */
+  }
+
+  .imagen-hospital {
+    width: 60%; /* Ambas ocuparán el 100% del ancho de la sección */
+  }
+
+  .texto-hospital {
+    font-size: 0.8em;
+    margin: 0 10px; /* Reducir márgenes en pantallas pequeñas */
+  }
+
+  .container-hospital .titulo-separacion-hospital{
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .container-hospital .titulo-separacion-hospital{
+    font-size: 0.7rem;
+  }
+}
+
+
+
+
+
+
+
+
+  /* Media Query para pantallas de 1270px o menos
+@media (max-width: 1270px) {
+  .intro-hospital .texto-hospital {
+      width: 70%;
+      font-size: 0.95em;
+  }
+
+  .intro-hospital h2 {
+      font-size: 1.8em;
+  }
+} */
+
+/* Media Query para pantallas de 780px o menos */
+/* @media (max-width: 780px) {
+  .intro-hospital .texto-hospital {
+      width: 75%;
+      font-size: 0.9em;
+  }
+
+  .intro-hospital h2 {
+      font-size: 1.6em;
+  }
+} */
+
+/* @media (max-width: 768px) {
+  .container-galeria-img .popup-image img {
+    width: 95%;
+  }
+
+  .container-galeria-img .popup-image .prev,
+  .container-galeria-img .popup-image .next {
+    font-size: 30px;
+  }
+} */
+
+/* Media Query para pantallas de 501px o menos */
+/* @media (max-width: 501px) {
+  .intro-hospital .texto-hospital {
+      width: 70%;
+      font-size: 0.8em;
+  }
+
+  .intro-hospital h2 {
+      font-size: 1.4em;
+  }
+} */
