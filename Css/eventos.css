@@ -1,0 +1,239 @@
+/* Diseño general */
+.intro-oferta {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  
+  .container-hospital .banner-bibliotecas {
+    width: 100%;
+    height: auto;
+    max-height: 500px; /* Limita la altura máxima a 500px */
+    object-fit: cover; /* Mantiene el estilo de ajuste */
+    max-width: 100%; /* Asegura que la imagen no exceda el ancho del contenedor */
+    filter: brightness(60%); /* Hacer la imagen más oscura */
+    display: block; /* Asegura que la imagen sea un bloque que ocupa todo el ancho */
+  }
+  
+  /* SEPARACION */
+  
+  .container-hospital .imagen-separacion-bibliotecas-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .container-hospital .imagen-separacion {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 0.5vw;
+    margin-bottom: 2vw;
+    filter: brightness(40%); /* Hacer la imagen más oscura */
+  }
+  
+  .container-hospital .titulo-separacion-bibliotecas {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9);
+    border-bottom: 5px solid #f07d06; /* Línea debajo del título */
+    display: inline-block;
+    width: fit-content; /* Ajusta el ancho de la línea al contenido del texto */
+    padding-left: 10px; /* Opcional: Agrega espacio a la izquierda de la línea */
+    padding-right: 10px; /* Opcional: Agrega espacio a la derecha de la línea */
+    white-space: nowrap; /* Evita que el texto haga salto de línea */
+  }
+  
+  /* *************** */
+  
+  .intro-oferta .texto-reseña {
+    width: 60%;
+    margin: 0 auto;
+    text-align: justify;
+    font-size: 1em;
+    margin-bottom: 30px;
+    margin-top: 50px;
+  }
+  
+  .intro-oferta .texto-reseña p {
+    margin-bottom: 20px;
+    margin-top: 30px;
+  }
+  
+  /* LINK */
+
+.imagen-link {
+    display: block;
+    margin: 20px auto; /* Centra la imagen y añade espacio arriba y abajo */
+    max-width: 50%; /* Asegura que no se salga de su contenedor */
+    width: 30%;
+    height: auto; /* Mantiene la proporción de la imagen */
+    margin-bottom: 40px;
+  }
+
+  /* NUEVO */
+
+  .row{
+    margin: 0 auto;
+    text-align: center; /* Centrar contenido */
+  }
+
+  .card {
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 2px 0px;
+    margin: 0 auto 20px auto;
+    width: 100%;
+    margin-bottom: 4vw;
+  }
+  
+  .card-body {
+    padding: 15px;
+  }
+  
+  .card-body h5 {
+    font-size: 1.2em;
+    margin: 10px 0;
+    font-weight: bold;
+    color: #32398e;
+  }
+  
+  .card-body p {
+    font-size: 0.8em;
+    margin: 10px 0;
+  }
+
+  /* PARA QUE TODAS LAS IMG TENGAN EL MISMO TAMAÑO */
+  .card-img-top {
+    width: 237px; /* Establecer el ancho */
+    height: 158px; /* Establecer el alto */
+    object-fit: cover; /* Mantener la proporción de la imagen */
+  }
+
+  .video-container{
+    margin-top: 50px;
+  }
+  
+
+  /* PESTAÑAS CLASIFICACIÓN */
+  #filter-buttons button {
+    border-radius: 3px;
+    background: #fff;
+    border: transparent;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 1px 2px 0px;
+
+  }
+  #filter-buttons button:hover {
+    background: #ddd;
+  }
+  #filter-buttons button.active {
+    color: #fff;
+    background: #32398e;
+  }
+  #filterable-cards .card {
+    width: 15rem;
+    border: 2px solid transparent;
+  }
+  #filterable-cards .card.hide {
+    display: none;
+  }
+
+  @media (max-width: 1270px) {
+    .video-container iframe {
+      width: 50%;
+      height: 50vh; /* Mantener más ancho que alto */
+    }
+  }
+
+
+  @media screen and (max-width: 1080px){
+    .container-hospital .titulo-separacion-bibliotecas{
+      font-size: 2rem;
+    }
+  }
+  
+  @media screen and (max-width: 840px){
+    .container-hospital .titulo-separacion-bibliotecas{
+      font-size: 1.8rem;
+    }
+  }
+  
+  @media screen and (max-width: 780px){
+    .container-hospital .titulo-separacion-bibliotecas{
+      font-size: 1.5rem;
+    }
+
+    .intro-oferta .texto-reseña {
+        width: 80%;
+        font-size: 0.9em;
+      }
+
+      .imagen-link {
+        width: 40%;
+      }
+
+      .video-container iframe {
+        width: 50%;
+        height: 35vh; /* Mantener más ancho que alto */
+      }
+  }
+  
+  @media screen and (max-width: 650px){
+    .container-hospital .titulo-separacion-bibliotecas{
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 600px) {
+    #filterable-cards {
+      justify-content: center;
+    }
+    #filterable-cards .card {
+      width: calc(80% / 1 - 10px);
+    }
+  }
+  
+  @media (max-width: 501px) {
+    .intro-oferta h2 {
+      font-size: 1.5em;
+      width: 80%;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+
+    .container-hospital .titulo-separacion-bibliotecas{
+      font-size: 1rem;
+    }
+
+    .intro-oferta .texto-reseña {
+        width: 80%;
+        font-size: 0.8em;
+      }
+
+      .imagen-link {
+        width: 60%;
+      }
+
+      .video-container iframe {
+        width: 70%;
+        height: 30vh; /* Mantener más ancho que alto */
+      }
+
+  }
+
+  @media screen and (max-width: 420px){
+    .container-hospital .titulo-separacion-bibliotecas{
+      font-size: 0.7rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    #filter-buttons .btn {
+      font-size: 0.8em; /* Ajusta este valor según el tamaño relativo que prefieras */
+    }
+  }
+  
